@@ -1,0 +1,297 @@
+{
+  "config": {
+    "view": {
+      "continuousWidth": 300,
+      "continuousHeight": 300
+    }
+  },
+  "data": {
+    "name": "data-940946261f3bdc3e5e0a396e5c0613a7"
+  },
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "color": {
+      "field": "Richtung",
+      "title": "Richtung",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Stunde",
+        "type": "ordinal"
+      },
+      {
+        "field": "Richtung",
+        "type": "nominal"
+      },
+      {
+        "field": "Anzahl",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "field": "Stunde",
+      "title": "Stunden",
+      "type": "ordinal"
+    },
+    "xOffset": {
+      "field": "Richtung",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "Anzahl",
+      "title": "Anahl Personen",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "title": "Anzahl der Personen pro Stunde in beide Richtungen am 15.10.2021",
+  "width": 400,
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "datasets": {
+    "data-940946261f3bdc3e5e0a396e5c0613a7": [
+      {
+        "Stunde": 0,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 17
+      },
+      {
+        "Stunde": 1,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 12
+      },
+      {
+        "Stunde": 2,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 10
+      },
+      {
+        "Stunde": 3,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 52
+      },
+      {
+        "Stunde": 4,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 108
+      },
+      {
+        "Stunde": 5,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 195
+      },
+      {
+        "Stunde": 6,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 239
+      },
+      {
+        "Stunde": 7,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 470
+      },
+      {
+        "Stunde": 8,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 857
+      },
+      {
+        "Stunde": 9,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 1222
+      },
+      {
+        "Stunde": 10,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 1563
+      },
+      {
+        "Stunde": 11,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 1635
+      },
+      {
+        "Stunde": 12,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 1661
+      },
+      {
+        "Stunde": 13,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 1784
+      },
+      {
+        "Stunde": 14,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 1899
+      },
+      {
+        "Stunde": 15,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 2005
+      },
+      {
+        "Stunde": 16,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 1643
+      },
+      {
+        "Stunde": 17,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 1005
+      },
+      {
+        "Stunde": 18,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 610
+      },
+      {
+        "Stunde": 19,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 483
+      },
+      {
+        "Stunde": 20,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 513
+      },
+      {
+        "Stunde": 21,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 379
+      },
+      {
+        "Stunde": 22,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 244
+      },
+      {
+        "Stunde": 23,
+        "Richtung": "adult_ltr_pedestrians_count",
+        "Anzahl": 138
+      },
+      {
+        "Stunde": 0,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 6
+      },
+      {
+        "Stunde": 1,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 15
+      },
+      {
+        "Stunde": 2,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 23
+      },
+      {
+        "Stunde": 3,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 70
+      },
+      {
+        "Stunde": 4,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 183
+      },
+      {
+        "Stunde": 5,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 452
+      },
+      {
+        "Stunde": 6,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 567
+      },
+      {
+        "Stunde": 7,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 567
+      },
+      {
+        "Stunde": 8,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 744
+      },
+      {
+        "Stunde": 9,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 1069
+      },
+      {
+        "Stunde": 10,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 1562
+      },
+      {
+        "Stunde": 11,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 1540
+      },
+      {
+        "Stunde": 12,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 1643
+      },
+      {
+        "Stunde": 13,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 1459
+      },
+      {
+        "Stunde": 14,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 1428
+      },
+      {
+        "Stunde": 15,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 1472
+      },
+      {
+        "Stunde": 16,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 1364
+      },
+      {
+        "Stunde": 17,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 945
+      },
+      {
+        "Stunde": 18,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 569
+      },
+      {
+        "Stunde": 19,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 436
+      },
+      {
+        "Stunde": 20,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 442
+      },
+      {
+        "Stunde": 21,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 417
+      },
+      {
+        "Stunde": 22,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 244
+      },
+      {
+        "Stunde": 23,
+        "Richtung": "adult_rtl_pedestrians_count",
+        "Anzahl": 85
+      }
+    ]
+  }
+}
