@@ -2,9 +2,8 @@ import { VegaEmbed } from "react-vega"; // VegaEmbed anstatt VegaLite (isch es e
 import daten from "./assets/aurelias-chart.json"; //entweder mychart oder aurelias-chart... fals neu exportiert -> in assets ordner ersetzen
 
 export const MainArea = () => {
-  {
-    console.log(daten);
-  }
+  // evtl. {console.log(daten);} zum was testen
+
   return (
     <main>
       <VegaEmbed spec={daten}></VegaEmbed>
