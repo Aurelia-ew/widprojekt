@@ -15,9 +15,9 @@ export const Header = ({info, setInfo, place, group}) => {
             src="https://upload.wikimedia.org/wikipedia/commons/d/d3/FHNW_Logo.svg"
             alt="Logo FHNW"
           />
-        <h2 style={{color: "black", fontStyle: "Arial"}}>
+        <h3 style={{color: "black", fontStyle: "Arial"}}>
           Wann gibt es an der ... {place} mehr ...{group}, die von Links nach Rechts gehen im Vergleich zu Personen die von Rects nach Links?
-        </h2>
+        </h3>
 
         <div>
           <IconButton aria-label="Info" color="primary" onClick={() => setInfo(true)}>
@@ -29,7 +29,7 @@ export const Header = ({info, setInfo, place, group}) => {
             </DialogTitle>
             <DialogContent>
               <Typography>
-                Autorinnen: Aurelia Weickgenannt und Celine Philipin
+                Autorinnen: Aurelia Weickgenannt und Celine Philippin
               </Typography>
               <Typography>
                 Erstellt im Modul 3050 Webprogrammierung und interaktive Datenvisualisierung
