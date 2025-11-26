@@ -33,9 +33,11 @@ export const Sidebar = ({
           value={year}
           onChange={(e) => setYear(e.target.value)}
         >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={2021}>Jahr 2021</MenuItem>
+          <MenuItem value={2022}>Jahr 2022</MenuItem>
+          <MenuItem value={2023}>Jahr 2023</MenuItem>
+          <MenuItem value={2024}>Jahr 2024</MenuItem>
+          <MenuItem value={2025}>Jahr 2025</MenuItem>
         </SelectField>
 
         <SelectField
@@ -43,9 +45,10 @@ export const Sidebar = ({
           value={place}
           onChange={(e) => setPlace(e.target.value)}
         >
-          <MenuItem value={1}>Low</MenuItem>
-          <MenuItem value={2}>Medium</MenuItem>
-          <MenuItem value={3}>High</MenuItem>
+          <MenuItem value={1}>Bahnhofstrasse (Nord)</MenuItem>
+          <MenuItem value={2}>Bahnhofstrasse (Mitte)</MenuItem>
+          <MenuItem value={3}>Bahnhofstrasse (Süd)</MenuItem>
+          <MenuItem value={4}>Lintheschergasse</MenuItem>
         </SelectField>
 
         <SelectField
@@ -53,8 +56,8 @@ export const Sidebar = ({
           value={group}
           onChange={(e) => setGroup(e.target.value)}
         >
-          <MenuItem value="A">Alpha</MenuItem>
-          <MenuItem value="B">Beta</MenuItem>
+          <MenuItem value="A">Erwachsene</MenuItem>
+          <MenuItem value="B">Kinder</MenuItem>
         </SelectField>
       </div>
     </aside>
