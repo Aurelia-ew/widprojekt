@@ -10,20 +10,16 @@ import { useState } from "react";
 export function App() {
   // "Named export"
   // React-Hooks definieren
-  const [year, setYear] = useState("");
-  const [place, setPlace] = useState("");
-  const [group, setGroup] = useState("");
+  const [year, setYear] = useState("2024");
+  const [place, setPlace] = useState("Bahnhofstrasse (Nord)");
+  const [group, setGroup] = useState("Erwachsene");
   const [info, setInfo] = useState(false);
 
   // hier unten React-Hooks "vererben / weitergeben"
   // z.B. side={side} setSide={setSide}
   return (
     <div className="app-container">
-      <Header 
-      info={info}
-      setInfo={setInfo}
-      place={place}
-      group={group}/>
+      <Header info={info} setInfo={setInfo} place={place} group={group} />
       <div className="main-container">
         <MainArea />
         <Sidebar

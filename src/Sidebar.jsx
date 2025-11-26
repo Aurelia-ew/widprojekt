@@ -26,18 +26,18 @@ export const Sidebar = ({
 
   return (
     <aside>
-      <div>Sidebar (da chunnt na en Titel inne...) </div>
+      <h4 style={{ color: "black" }}>Auswahl Optionen: </h4>
       <div>
         <SelectField
           label="Jahr"
           value={year}
           onChange={(e) => setYear(e.target.value)}
         >
-          <MenuItem value={2021}>Jahr 2021</MenuItem>
-          <MenuItem value={2022}>Jahr 2022</MenuItem>
-          <MenuItem value={2023}>Jahr 2023</MenuItem>
-          <MenuItem value={2024}>Jahr 2024</MenuItem>
-          <MenuItem value={2025}>Jahr 2025</MenuItem>
+          <MenuItem value={2021}>2021</MenuItem>
+          <MenuItem value={2022}>2022</MenuItem>
+          <MenuItem value={2023}>2023</MenuItem>
+          <MenuItem value={2024}>2024</MenuItem>
+          <MenuItem value={2025}>2025</MenuItem>
         </SelectField>
 
         <SelectField
@@ -45,10 +45,16 @@ export const Sidebar = ({
           value={place}
           onChange={(e) => setPlace(e.target.value)}
         >
-          <MenuItem value={1}>Bahnhofstrasse (Nord)</MenuItem>
-          <MenuItem value={2}>Bahnhofstrasse (Mitte)</MenuItem>
-          <MenuItem value={3}>Bahnhofstrasse (Süd)</MenuItem>
-          <MenuItem value={4}>Lintheschergasse</MenuItem>
+          <MenuItem value={"Bahnhofstrasse (Nord)"}>
+            Bahnhofstrasse (Nord)
+          </MenuItem>
+          <MenuItem value={"Bahnhofstrasse (Mitte)"}>
+            Bahnhofstrasse (Mitte)
+          </MenuItem>
+          <MenuItem value={"Bahnhofstrasse (Süd)"}>
+            Bahnhofstrasse (Süd)
+          </MenuItem>
+          <MenuItem value={"Lintheschergasse"}>Lintheschergasse</MenuItem>
         </SelectField>
 
         <SelectField
@@ -56,8 +62,8 @@ export const Sidebar = ({
           value={group}
           onChange={(e) => setGroup(e.target.value)}
         >
-          <MenuItem value="A">Erwachsene</MenuItem>
-          <MenuItem value="B">Kinder</MenuItem>
+          <MenuItem value="Erwachsene">Erwachsene</MenuItem>
+          <MenuItem value="Kinder">Kinder</MenuItem>
         </SelectField>
       </div>
     </aside>
