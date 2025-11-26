@@ -16,7 +16,7 @@ export const Header = ({info, setInfo, place, group}) => {
             alt="Logo FHNW"
           />
         <h3 style={{color: "black", fontStyle: "Arial"}}>
-          Wann gibt es an der ... {place} mehr ...{group}, die von Links nach Rechts gehen im Vergleich zu Personen die von Rects nach Links?
+          Wann gibt es an der ... {place} mehr ...{group}, die von Links nach Rechts gehen im Vergleich zu Personen die von Rechts nach Links?
         </h3>
 
         <div>

@@ -18,7 +18,7 @@ body {
   flex: 1;
 }
 header {
-  background: lightblue;
+  background: #fde70e;
   padding: 10px;
   width: 100%;
 }
@@ -34,7 +34,7 @@ aside {
   padding: 10px;
 }
 footer {
-  background: lightblue;
+  background: #fde70e;
   padding: 10px;
   width: 100%;
 }
