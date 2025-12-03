@@ -7,7 +7,7 @@ import Select from "@mui/material/Select";
 export const Sidebar = ({
   year,
   setYear,
-  location,
+  location_id,
   setLocation,
   group,
   setGroup,
@@ -42,19 +42,13 @@ export const Sidebar = ({
 
         <SelectField
           label="Ort"
-          value={location}
+          value={location_id}
           onChange={(e) => setLocation(e.target.value)}
         >
-          <MenuItem value={"Bahnhofstrasse (Nord)"}>
-            Bahnhofstrasse (Nord)
-          </MenuItem>
-          <MenuItem value={"Bahnhofstrasse (Mitte)"}>
-            Bahnhofstrasse (Mitte)
-          </MenuItem>
-          <MenuItem value={"Bahnhofstrasse (Süd)"}>
-            Bahnhofstrasse (Süd)
-          </MenuItem>
-          <MenuItem value={"Lintheschergasse"}>Lintheschergasse</MenuItem>
+          <MenuItem value={331}>Bahnhofstrasse (Nord)</MenuItem>
+          <MenuItem value={329}>Bahnhofstrasse (Mitte)</MenuItem>
+          <MenuItem value={330}>Bahnhofstrasse (Süd)</MenuItem>
+          <MenuItem value={670}>Lintheschergasse</MenuItem>
         </SelectField>
 
         <SelectField
@@ -62,8 +56,8 @@ export const Sidebar = ({
           value={group}
           onChange={(e) => setGroup(e.target.value)}
         >
-          <MenuItem value="Erwachsene">Erwachsene</MenuItem>
-          <MenuItem value="Kinder">Kinder</MenuItem>
+          <MenuItem value="adult">Erwachsene</MenuItem>
+          <MenuItem value="child">Kinder</MenuItem>
         </SelectField>
       </div>
     </aside>
