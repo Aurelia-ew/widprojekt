@@ -19,7 +19,7 @@ export function App() {
   useEffect(
     () => {
       fetch(
-        `http://localhost:8000/api/v1/year/${year}/location/${location_id}/group/${group}`
+        `http://localhost:8000/api/v1/year/${year}/location_id/${location_id}/group/${group}`
       )
         .then((res) => {
           if (!res.ok) {
@@ -28,7 +28,9 @@ export function App() {
           return res.json();
         })
         .then((res) => setData(res))
-        .catch((err) => console.error("Fetch failed:", err));
+        .catch((err) =>
+          console.error("Fetch failed (ja, eig redundant zu obe...):", err)
+        );
     },
     [year, location_id, group] // Abhängigkeitsliste
   );

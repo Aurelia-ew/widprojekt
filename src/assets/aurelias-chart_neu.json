@@ -13,14 +13,8 @@
     "color": {
       "field": "Richtung_Label",
       "scale": {
-        "domain": [
-          "von Links nach Rechts",
-          "von Rechts nach Links"
-        ],
-        "range": [
-          "#d8b365",
-          "#5ab4ac"
-        ]
+        "domain": ["von Links nach Rechts", "von Rechts nach Links"],
+        "range": ["#d8b365", "#5ab4ac"]
       },
       "title": "Richtung",
       "type": "nominal"
@@ -55,10 +49,7 @@
     "y": {
       "field": "Anzahl",
       "scale": {
-        "domain": [
-          0,
-          7000
-        ]
+        "domain": [0, 7000]
       },
       "title": "Anzahl Personen",
       "type": "quantitative"

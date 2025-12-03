@@ -8,12 +8,12 @@ data_zh = pd.read_csv("assets/Gesamtdatensatz.csv")
 data_zh["timestamp"] = pd.to_datetime(data_zh["timestamp"])
 data_zh["year"] = data_zh["timestamp"].dt.year.astype(int)      # type: ignore # year aus timestamp extrahieren (in Teildatensatz igwie bereits vorhanen)
 
-origins = ["http://localhost:5173/",
-           "http://localhost:5174/"]
+origins = ["http://localhost:5173",
+           "http://localhost:5174"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["*"],    # anderer server zulassen (aus liste oben)
+    allow_origins = origins,    # anderer server zulassen (aus liste oben)
     allow_methods=["GET"],      # same as default (others: POST, PUT, DELETE, ...)
     allow_headers=["*"],        # ööhm ,hani nanned ganz checked...
     allow_credentials=False,    # cookies weitergeben zulassen
@@ -41,8 +41,7 @@ async def get_data(year : int , location_id : int, group : str):  # type hints -
     return final_data
 
 
-#(nur speichern um print in terminal anzusehen, da server läuft wird code permanent ausgeführt)
-
+# (nur speichern um print in terminal anzusehen, da server läuft wird code permanent ausgeführt)
 #print(data_zh.dtypes)      
 #print(data_zh[["timestamp", "year"]].head())
 

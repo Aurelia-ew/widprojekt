@@ -7,7 +7,22 @@ import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export const Header = ({ info, setInfo, location, group }) => {
+export const Header = ({ info, setInfo, location_id, group }) => {
+  //um von location_id den richtigen text im header anzuzeigen (theoretisch auch überbackendabfrage möglich)
+  const locationMap = {
+    331: "Bahnhofstrasse (Nord)",
+    329: "Bahnhofstrasse (Mitte)",
+    330: "Bahnhofstrasse (Süd)",
+    670: "Lintheschergasse",
+  };
+  const location_name = locationMap[location_id];
+
+  const groupMap = {
+    adult: "Erwachsene",
+    child: "Kinder",
+  };
+  const group_name = groupMap[group];
+
   return (
     <header>
       <div
@@ -23,7 +38,7 @@ export const Header = ({ info, setInfo, location, group }) => {
           alt="Logo FHNW"
         />
         <h3 style={{ color: "black", fontStyle: "Arial" }}>
-          Titel Webseite (Platzhalter) {location} - {group}
+          Titel Webseite (Platzhalter) {location_name} - {group_name}
         </h3>
 
         <div>
