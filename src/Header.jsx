@@ -23,8 +23,12 @@ export const Header = ({ info, setInfo, location, group }) => {
           alt="Logo FHNW"
         />
         <h3 style={{ color: "black", fontStyle: "Arial" }}>
+<<<<<<< Updated upstream
           Wann gibt es an der {location} mehr {group}, die von Links nach Rechts
           gehen im Vergleich zu Personen die von Rechts nach Links gehen?
+=======
+          Titel Webseite (Platzhalter) {place} - {group}
+>>>>>>> Stashed changes
         </h3>
 
         <div>
