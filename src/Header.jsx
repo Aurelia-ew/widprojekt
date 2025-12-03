@@ -7,7 +7,7 @@ import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export const Header = ({ info, setInfo, place, group }) => {
+export const Header = ({ info, setInfo, location, group }) => {
   return (
     <header>
       <div
@@ -23,7 +23,7 @@ export const Header = ({ info, setInfo, place, group }) => {
           alt="Logo FHNW"
         />
         <h3 style={{ color: "black", fontStyle: "Arial" }}>
-          Wann gibt es an der {place} mehr {group}, die von Links nach Rechts
+          Wann gibt es an der {location} mehr {group}, die von Links nach Rechts
           gehen im Vergleich zu Personen die von Rechts nach Links gehen?
         </h3>
 

@@ -11,7 +11,7 @@ export function App() {
   // "Named export"
   // React-Hooks definieren
   const [year, setYear] = useState("2024");
-  const [place, setPlace] = useState("Bahnhofstrasse (Nord)");
+  const [location, setLocation] = useState("Bahnhofstrasse (Nord)");
   const [group, setGroup] = useState("Erwachsene");
   const [info, setInfo] = useState(false);
 
@@ -19,14 +19,14 @@ export function App() {
   // z.B. side={side} setSide={setSide}
   return (
     <div className="app-container">
-      <Header info={info} setInfo={setInfo} place={place} group={group} />
+      <Header info={info} setInfo={setInfo} location={location} group={group} />
       <div className="main-container">
         <MainArea />
         <Sidebar
           year={year}
           setYear={setYear}
-          place={place}
-          setPlace={setPlace}
+          location={location}
+          setLocation={setLocation}
           group={group}
           setGroup={setGroup}
         />

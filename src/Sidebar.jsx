@@ -7,8 +7,8 @@ import Select from "@mui/material/Select";
 export const Sidebar = ({
   year,
   setYear,
-  place,
-  setPlace,
+  location,
+  setLocation,
   group,
   setGroup,
 }) => {
@@ -42,8 +42,8 @@ export const Sidebar = ({
 
         <SelectField
           label="Ort"
-          value={place}
-          onChange={(e) => setPlace(e.target.value)}
+          value={location}
+          onChange={(e) => setLocation(e.target.value)}
         >
           <MenuItem value={"Bahnhofstrasse (Nord)"}>
             Bahnhofstrasse (Nord)
