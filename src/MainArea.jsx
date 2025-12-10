@@ -1,4 +1,4 @@
-import { VegaLite } from "react-vega"; // VegaEmbed anstatt VegaLite (isch es echts Problem gsii...)
+import { VegaLite } from "react-vega";
 import { useState, useEffect } from "react";
 import spec from "./assets/aurelias-chart_neu.json"; // aurelias-chart_neu
 
@@ -16,15 +16,13 @@ export const MainArea = (year, location_id, group) => {
           }
           return res.json();
         })
-        .then((res) => setData(res))
-        .catch(
-          (err) => console.error("Fetch failed:", err) //(ja, eig redundant zu obe...)
-        );
+        .then((res) => setData(res));
     },
     [year, location_id, group] // Abhängigkeitsliste
   );
 
   return (
+    //main container nur mit style funktion (App.css)-> eher vermeiden
     <main>
       <VegaLite spec={spec} data={{ table: data }}></VegaLite>
     </main>

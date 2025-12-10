@@ -25,55 +25,46 @@ export const Header = ({ info, setInfo, location_id, group }) => {
 
   return (
     <header>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/d/d3/FHNW_Logo.svg"
-          alt="Logo FHNW"
-        />
-        <h3 style={{ color: "black", fontStyle: "Arial" }}>
-          Titel Webseite (Platzhalter) {location_name} - {group_name}
-        </h3>
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/d/d3/FHNW_Logo.svg"
+        alt="Logo FHNW"
+      />
+      <h3 style={{ color: "black", fontStyle: "Arial" }}>
+        Titel Webseite (Platzhalter) {location_name} - {group_name}
+      </h3>
 
-        <div>
-          <IconButton
-            aria-label="Info"
-            color="primary"
-            onClick={() => setInfo(true)}
-          >
-            <InfoIcon fontSize="large" />
-          </IconButton>
-          <Dialog open={info} onClose={() => setInfo(false)}>
-            <DialogTitle>
-              <h3>Informationen zur Webseite</h3>
-            </DialogTitle>
-            <DialogContent>
-              <Typography>
-                Autorinnen: Aurelia Weickgenannt und Celine Philippin
-              </Typography>
-              <Typography>
-                Erstellt im Modul 3050 Webprogrammierung und interaktive
-                Datenvisualisierung
-              </Typography>
-              <Typography>Datenquellen: ...</Typography>
-            </DialogContent>
-            <DialogActions>
-              <Button variant="contained" onClick={() => setInfo(false)}>
-                Schliessen
-              </Button>
-            </DialogActions>
-          </Dialog>
+      <div>
+        <IconButton
+          aria-label="Info"
+          color="primary"
+          onClick={() => setInfo(true)}
+        >
+          <InfoIcon fontSize="large" />
+        </IconButton>
+        <Dialog open={info} onClose={() => setInfo(false)}>
+          <DialogTitle>
+            <h3>Informationen zur Webseite</h3>
+          </DialogTitle>
+          <DialogContent>
+            <Typography>
+              Autorinnen: Aurelia Weickgenannt und Celine Philippin
+            </Typography>
+            <Typography>
+              Erstellt im Modul 3050 Webprogrammierung und interaktive
+              Datenvisualisierung
+            </Typography>
+            <Typography>Datenquellen: ...</Typography>
+          </DialogContent>
+          <DialogActions>
+            <Button variant="contained" onClick={() => setInfo(false)}>
+              Schliessen
+            </Button>
+          </DialogActions>
+        </Dialog>
 
-          <Button variant="contained" onClick={() => window.location.reload()}>
-            Reset Webseite
-          </Button>
-        </div>
+        <Button variant="contained" onClick={() => window.location.reload()}>
+          Reset Webseite
+        </Button>
       </div>
     </header>
   );

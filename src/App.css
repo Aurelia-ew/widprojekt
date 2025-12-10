@@ -8,25 +8,33 @@ body {
 
 .app-container {
   display: flex;
-  flex-flow: column wrap; /* ersetz zusammen flex-direction: row UND flex-wrap: wrap */
-  justify-content: space-around;
-  min-height: 100vh; /* full page vh=viewport height vw=viewport width*/
-  min-width: 100vw;
+  flex-flow: row wrap; /* ersetz zusammen flex-direction: row UND flex-wrap: wrap */
+  height: 100vh; /* full page vh=viewport height vw=viewport width*/
+  width: 100%;
 }
 .main-container {
   display: flex;
   flex: 1;
+  min-width: 0; /* verhindert Layout-Überlauf */
+  min-height: 0;
 }
 header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
   background: #fde70e;
-  padding: 10px;
+  padding: 20px;
   width: 100%;
 }
 main {
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  overflow: hidden;
   background: white;
   padding: 10px;
-  min-width: 400px;
+  min-width: 0; /* verhindert Layout-Überlauf */
 }
 aside {
   width: 300px;
@@ -40,6 +48,8 @@ footer {
 }
 
 .vega-embed {
-  width: 100%; /* zur darstellung der Vega grafik, */
-  height: 100%; /* !important von ";" um alles was (allenfalls) vorherdefiniert wurde zu überschreiben*/
+  flex: 1;
+  width: 90%; /* zur darstellung der Vega grafik, */
+  height: 90%;
+  min-height: 0;
 }
