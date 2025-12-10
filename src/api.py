@@ -13,7 +13,7 @@ origins = ["http://localhost:5173",
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["*"],    # origins anderer server zulassen (aus liste oben)
+    allow_origins = origins,    # anderer server zulassen (aus liste oben)
     allow_methods=["GET"],      # same as default (others: POST, PUT, DELETE, ...)
     allow_headers=["*"],        # erlaubt dass nach HTTP Header gefragt werden kann (z.B. Accept language)
     allow_credentials=False,    # cookies weitergeben zulassen
