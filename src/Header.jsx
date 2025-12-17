@@ -53,7 +53,7 @@ export const Header = ({ info, setInfo, location_id, group }) => {
               Erstellt im Modul 3050 Webprogrammierung und interaktive
               Datenvisualisierung
             </Typography>
-            <Typography>Datenquellen: ...</Typography>
+            <Typography>Datenquelle Gesamtdatensatz: fhnw bzw. Stad Zürich</Typography>
           </DialogContent>
           <DialogActions>
             <Button variant="contained" onClick={() => setInfo(false)}>
