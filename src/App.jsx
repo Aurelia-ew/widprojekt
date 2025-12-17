@@ -23,6 +23,7 @@ export function App() {
         info={info}
         setInfo={setInfo}
         location_id={location_id}
+        year={year}
         group={group}
       />
       <div className="main-container">

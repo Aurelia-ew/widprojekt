@@ -8,26 +8,32 @@ Dieses Projekt dient in erster Linie zur Erlernung unterschiedlichere Elemente d
 Das Ziel dieser Visualisierung ist, den Fussgänger Fluss an vier verschiedenen Orten der Bahnhofstrasse Zürich zu zeigen. Dabei wird die Anzahl Personen pro Gruppe die von "links-nach-rechts" gehen mit jenen die von "rechts-nach-links" gehen verglichen.\
 Die Webapplikation ist auf interaktive Erkundung der Daten optimiert.
 
+Die Fokus-Frage dieses Projekt lautet: "Wann im Jahre 2024 gibt es an der Bahnhofstrasse Nord mehr erwachsene Fussgänger, die von links-nach-rechts gehen im Vergleich zu rechts-nach-links? "
+
 Der verwendete Datensatz (Fussgänger-Zählung an bestimmten Orten der Stadt Zürich) wurde von der Fachhochschule Nordwestschweiz (FHNW) zur Verfügung gestellt.
 
-## How-To install:
+## How-To installieren:
 
-npm i
+in neuer Umgebung Abhängigkeiten Installieren\
+(jeweils Befehle in Terminal ausführen):
 
-to run Frontend:
+- npm i
 
-- type: npm run dev
-- open (enjoy visualization): http://localhost:5173/
+um Frontend zu starten:
 
-to run Backend:
+- npm run dev
+- startet unter: http://localhost:5173/
 
-- type: fastapi dev api.py
-- open (only to check): http://localhost:8000/\
-  -> (if you wanna get data, enter api e.g.: http://localhost:8000/api/v1/year/2021/location_id/329/group/adult)
+um Backend zu starten:
+
+- fastapi dev api.py
+- startet unter: http://localhost:8000/\
+  -> (zur Kontrolle API abfragen manuell definieren, z.B.: http://localhost:8000/api/v1/year/2021/location_id/329/group/adult)
 
 ## Schlüssel-Entscheidungen:
 
 - React-Umgebung
+- Styling mit CSS
 - Grafik über Vega-Altair
 - Buttons von Material UI (MUI)
 - API Definition:

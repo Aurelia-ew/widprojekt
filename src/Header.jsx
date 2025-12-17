@@ -7,7 +7,7 @@ import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export const Header = ({ info, setInfo, location_id, group }) => {
+export const Header = ({ info, setInfo, location_id, year, group }) => {
   //um von location_id den richtigen text im header anzuzeigen (theoretisch auch überbackendabfrage möglich)
   const locationMap = {
     331: "Bahnhofstrasse (Nord)",
@@ -29,9 +29,10 @@ export const Header = ({ info, setInfo, location_id, group }) => {
         src="https://upload.wikimedia.org/wikipedia/commons/d/d3/FHNW_Logo.svg"
         alt="Logo FHNW"
       />
-      <h3 style={{ color: "black", fontStyle: "Arial" }}>
-        Titel Webseite (Platzhalter) {location_name} - {group_name}
-      </h3>
+      <h2 style={{ color: "black", fontStyle: "Arial" }}>
+        Fussgängeraufkommen an der {location_name} im Jahre {year} -{" "}
+        {group_name}
+      </h2>
 
       <div>
         <IconButton
@@ -48,12 +49,18 @@ export const Header = ({ info, setInfo, location_id, group }) => {
           <DialogContent>
             <Typography>
               Autorinnen: Aurelia Weickgenannt und Celine Philippin
+              <br />
+              <br />
+              Die Fokus-Frage dieses Projekt lautet: "Wann im Jahre 2024 gibt es
+              an der Bahnhofstrasse Nord mehr erwachsene Fussgänger, die von
+              links-nach-rechts gehen im Vergleich zu rechts-nach-links? "
+              <br />
+              <br />
+              Weitere Informationen siehe README.md file.
+              <br />
+              <br />
+              Datenquelle Gesamtdatensatz: FHNW bzw. Stadt Zürich
             </Typography>
-            <Typography>
-              Erstellt im Modul 3050 Webprogrammierung und interaktive
-              Datenvisualisierung
-            </Typography>
-            <Typography>Datenquelle Gesamtdatensatz: fhnw bzw. Stad Zürich</Typography>
           </DialogContent>
           <DialogActions>
             <Button variant="contained" onClick={() => setInfo(false)}>
