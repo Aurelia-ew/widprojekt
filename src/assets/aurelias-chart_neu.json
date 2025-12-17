@@ -65,31 +65,19 @@
   "mark": {
     "type": "bar"
   },
-  "config": {
-  "view": {
-    "continuousHeight": 300,
-    "continuousWidth": 300
-  },
-  "range": {
-    "slider": {"width": 1200}
-  }
-},
-
-"params": [
-  {
-    "name": "date_idx",
-    "value": 0,
-    "bind": {
-      "input": "range",
-      "min": 0,
-      "max": 15,
-      "step": 1,
-      "name": "Datum: ",
-      "style": "slider"
+  "params": [
+    {
+      "bind": {
+        "input": "range",
+        "max": 366,
+        "min": 0,
+        "name": "Datum: ",
+        "step": 1
+      },
+      "name": "date_idx",
+      "value": 0
     }
-  }
-],
-
+  ],
   "transform": [
     {
       "filter": "datum.date_idx == date_idx"

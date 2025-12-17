@@ -32,8 +32,8 @@ async def get_data(year : int , location_id : int, group : str):  # type hints -
     ltr_ped_count = f"{group}_ltr_pedestrians_count"    # nur als variable definiert weil direkt unten nicht möglich
     rtl_ped_count = f"{group}_rtl_pedestrians_count"    # nur als variable definiert weil direkt unten nicht möglich
     
-    filtered_data["Stunde"] = filtered_data["timestamp"].dt.hour
-    filtered_data["Datum"] = filtered_data["timestamp"].dt.strftime("%Y%m%d")
+    filtered_data["Stunde"] = filtered_data["timestamp"].dt.hour # Stunde für die x-Achse
+    filtered_data["Datum"] = filtered_data["timestamp"].dt.strftime("%Y%m%d") # Datum für den Slider 
 
     data_richtung = filtered_data.melt(
         id_vars=["timestamp", "Stunde", "Datum", "location_name", "location_id", "ltr_label", "rtl_label"],
