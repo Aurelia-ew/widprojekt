@@ -1,16 +1,34 @@
-# React + Vite
+# WID Projekt Aurelia + Celine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
 
-Currently, two official plugins are available:
+Im Rahmen des Moduls 3050 Webprogrammierung und interaktive Datenvisualisierung wurde eine Projektarbeit erarbeitet.
+Dieses Projekt dient in erster Linie zur Erlernung unterschiedlichere Elemente der Webprogrammierung und eine Veröffentlichung ist nicht geplant.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Das Ziel dieser Visualisierung ist, den Fussgänger Fluss an vier verschiedenen Orten der Bahnhofstrasse Zürich zu zeigen. Dabei wird die Anzahl Personen pro Gruppe die von "links-nach-rechts" gehen mit jenen die von "rechts-nach-links" gehen verglichen.\
+Die Webapplikation ist auf interaktive Erkundung der Daten optimiert.
 
-## React Compiler
+Der verwendete Datensatz (Fussgänger-Zählung an bestimmten Orten der Stadt Zürich) wurde von der Fachhochschule Nordwestschweiz (FHNW) zur Verfügung gestellt.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## How-To install:
 
-## Expanding the ESLint configuration
+npm i
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+to run Frontend:
+
+- type: npm run dev
+- open (enjoy visualization): http://localhost:5173/
+
+to run Backend:
+
+- type: fastapi dev api.py
+- open (only to check): http://localhost:8000/\
+  -> (if you wanna get data, enter api e.g.: http://localhost:8000/api/v1/year/2021/location_id/329/group/adult)
+
+## Schlüssel-Entscheidungen:
+
+- React-Umgebung
+- Grafik über Vega-Altair
+- Buttons von Material UI (MUI)
+- API Definition:
+  http://localhost:8000/api/v1/year/{year}/location/{location}/group/{group}
