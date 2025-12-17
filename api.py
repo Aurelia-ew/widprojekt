@@ -4,7 +4,7 @@ import pandas as pd
 
 app = FastAPI()
 
-data_zh = pd.read_csv("assets/Gesamtdatensatz.csv")
+data_zh = pd.read_csv("src/assets/Gesamtdatensatz.csv")
 data_zh["timestamp"] = pd.to_datetime(data_zh["timestamp"])
 data_zh["year"] = data_zh["timestamp"].dt.year.astype(int)      # type: ignore # year aus timestamp extrahieren (in Teildatensatz igwie bereits vorhanen)
 

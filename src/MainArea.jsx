@@ -12,11 +12,12 @@ export const MainArea = (year, location_id, group) => {
       )
         .then((res) => {
           if (!res.ok) {
-            throw new Error(`HTTP error! Status: ${res.status}`);
+            throw new Error(`HTTP error! Status: ${res.status}`); //erstellt jsx error
           }
           return res.json();
         })
-        .then((res) => setData(res));
+        .then((res) => setData(res))
+        .catch((err) => console.error("Fetch failed:", err)); //gibt jsx error aus
     },
     [year, location_id, group] // Abhängigkeitsliste
   );
