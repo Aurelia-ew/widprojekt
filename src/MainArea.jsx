@@ -2,7 +2,7 @@ import { VegaLite } from "react-vega";
 import { useState, useEffect } from "react";
 import spec from "./assets/aurelias-chart_neu.json"; // aurelias-chart_neu
 
-export const MainArea = (year, location_id, group) => {
+export const MainArea = ({year, location_id, group}) => {
   const [data, setData] = useState([]);
 
   useEffect(

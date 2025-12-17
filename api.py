@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import pandas as pd
+import numpy as np
 
 app = FastAPI()
 
@@ -26,18 +27,37 @@ async def get_root():
 
 @app.get("/api/v1/year/{year}/location_id/{location_id}/group/{group}")   #API mit Pfadparametern (Query wäre auch mögl. jedoch anderer Aufbau/Struktur)
 async def get_data(year : int , location_id : int, group : str):  # type hints -> erster check, ob str (auch mit logisch | oder weitere möglich -> wird automatisch in dokumentation ergänzt)
-    filtered_data = data_zh.query("year == @year and location_id == @location_id")
+    filtered_data = data_zh.query("year == @year and location_id == @location_id").copy()
 
     ltr_ped_count = f"{group}_ltr_pedestrians_count"    # nur als variable definiert weil direkt unten nicht möglich
     rtl_ped_count = f"{group}_rtl_pedestrians_count"    # nur als variable definiert weil direkt unten nicht möglich
+    
+    filtered_data["Stunde"] = filtered_data["timestamp"].dt.hour
+    filtered_data["Datum"] = filtered_data["timestamp"].dt.strftime("%Y%m%d")
 
-    final_data = filtered_data[["timestamp",
+    data_richtung = filtered_data.melt(
+        id_vars=["timestamp", "Stunde", "Datum", "location_name", "location_id", "ltr_label", "rtl_label"],
+        value_vars=[ltr_ped_count, rtl_ped_count],
+        var_name="Richtung",
+        value_name="Anzahl")
+    
+    unique_dates = sorted(data_richtung["Datum"].unique().tolist())
+    date_index_map = {d: i for i, d in enumerate(unique_dates)}
+    data_richtung["date_idx"] = data_richtung["Datum"].map(date_index_map)
+    
+    data_richtung["Richtung_Label"] = np.where(
+        data_richtung["Richtung"] == ltr_ped_count,
+        data_richtung["ltr_label"],
+        data_richtung["rtl_label"])
+    
+    final_data = data_richtung[["Stunde",
+                                "Datum",
+                                "date_idx",
                                 "location_name",
-                                "ltr_label",
-                                "rtl_label",
-                                ltr_ped_count,
-                                rtl_ped_count]
-                                ].to_dict(orient="records")
+                                "location_id",
+                                "Richtung",
+                                "Richtung_Label",
+                                "Anzahl"]].to_dict(orient="records")
     return final_data
 
 

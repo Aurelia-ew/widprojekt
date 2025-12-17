@@ -9,12 +9,15 @@
   "data": {
     "name": "table"
   },
+
   "encoding": {
     "color": {
       "field": "Richtung_Label",
       "scale": {
-        "domain": ["von Links nach Rechts", "von Rechts nach Links"],
-        "range": ["#d8b365", "#5ab4ac"]
+        "range": [
+          "#D3AF63",
+          "#5AB4AC"
+        ]
       },
       "title": "Richtung",
       "type": "nominal"
@@ -49,7 +52,10 @@
     "y": {
       "field": "Anzahl",
       "scale": {
-        "domain": [0, 7000]
+        "domain": [
+          0,
+          7000
+        ]
       },
       "title": "Anzahl Personen",
       "type": "quantitative"
@@ -59,22 +65,34 @@
   "mark": {
     "type": "bar"
   },
-  "params": [
-    {
-      "bind": {
-        "input": "range",
-        "max": 15,
-        "min": 0,
-        "name": "Datum: ",
-        "step": 1
-      },
-      "name": "date_idx",
-      "value": 0
+  "config": {
+  "view": {
+    "continuousHeight": 300,
+    "continuousWidth": 300
+  },
+  "range": {
+    "slider": {"width": 1200}
+  }
+},
+
+"params": [
+  {
+    "name": "date_idx",
+    "value": 0,
+    "bind": {
+      "input": "range",
+      "min": 0,
+      "max": 15,
+      "step": 1,
+      "name": "Datum: ",
+      "style": "slider"
     }
-  ],
+  }
+],
+
   "transform": [
     {
-      "filter": "(datum.date_idx === date_idx)"
+      "filter": "datum.date_idx == date_idx"
     }
   ],
   "width": "container"
