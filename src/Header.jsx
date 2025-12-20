@@ -52,8 +52,9 @@ export const Header = ({ info, setInfo, location_id, year, group }) => {
               <br />
               <br />
               Die Fokus-Frage dieses Projekt lautet: "Wann im Jahre 2024 gibt es
-              an der Bahnhofstrasse Nord mehr erwachsene Fussgänger, die von
-              links-nach-rechts gehen im Vergleich zu rechts-nach-links? "
+              an der Bahnhofstrasse Nord mehr erwachsene Fussgänger, die vom
+              Bürkliplatz zum Hauptbahnhof gehen im Vergleich zu vom
+              Hauptbahnhof zum Bürkliplatz?"
               <br />
               <br />
               Weitere Informationen siehe README.md file.
