@@ -8,15 +8,11 @@ import { MainArea } from "./MainArea";
 import { useState } from "react";
 
 export function App() {
-  // "Named export"
-  // React-Hooks definieren
   const [year, setYear] = useState("2024");
   const [location_id, setLocation] = useState(331);
   const [group, setGroup] = useState("adult");
   const [info, setInfo] = useState(false);
 
-  // hier unten React-Hooks "vererben / weitergeben"
-  // z.B. side={side} setSide={setSide}
   return (
     <div className="app-container">
       <Header
@@ -41,5 +37,3 @@ export function App() {
     </div>
   );
 }
-
-// export default App; // "Default export" -> in main.jsx anpassen!

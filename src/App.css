@@ -4,18 +4,16 @@ body {
   margin: 0;
 }
 
-/* viles us css dok: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-
 .app-container {
   display: flex;
-  flex-flow: row wrap; /* ersetz zusammen flex-direction: row UND flex-wrap: wrap */
-  height: 100vh; /* full page vh=viewport height vw=viewport width*/
+  flex-flow: row wrap;
+  height: 100vh;
   width: 100%;
 }
 .main-container {
   display: flex;
   flex: 1;
-  min-width: 0; /* verhindert Layout-Überlauf */
+  min-width: 0;
   min-height: 0;
 }
 header {
@@ -34,7 +32,7 @@ main {
   overflow: hidden;
   background: white;
   padding: 10px;
-  min-width: 0; /* verhindert Layout-Überlauf */
+  min-width: 0;
 }
 aside {
   width: 300px;
@@ -49,7 +47,7 @@ footer {
 
 .vega-embed {
   flex: 1;
-  width: 90%; /* zur darstellung der Vega grafik, */
+  width: 90%;
   height: 90%;
   min-height: 0;
 }

@@ -12,7 +12,6 @@ export const Sidebar = ({
   group,
   setGroup,
 }) => {
-  // Basis-Select-Feld, mb für abstand (spacing)
   const SelectField = ({ label, value, onChange, children }) => (
     <Box sx={{ minWidth: 120, mb: 2 }}>
       <FormControl fullWidth>
