@@ -1,8 +1,9 @@
 import { VegaLite } from "react-vega";
 import { useState, useEffect } from "react";
-import spec from "./assets/aurelias-chart_neu.json"; // aurelias-chart_neu
+import adultspec from "./assets/chart_adult.json"; // aurelias-chart_neu
+import childspec from "./assets/chart_child.json";
 
-export const MainArea = ({year, location_id, group}) => {
+export const MainArea = ({ year, location_id, group }) => {
   const [data, setData] = useState([]);
 
   useEffect(
@@ -25,7 +26,10 @@ export const MainArea = ({year, location_id, group}) => {
   return (
     //main container nur mit style funktion (App.css)-> eher vermeiden
     <main>
-      <VegaLite spec={spec} data={{ table: data }}></VegaLite>
+      <VegaLite
+        spec={group === "adult" ? adultspec : childspec}
+        data={{ table: data }}
+      ></VegaLite>
     </main>
   );
 };

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300
+    }
+  },
+  "data": {
+    "name": "table"
+  },
+
+  "encoding": {
+    "color": {
+      "field": "Richtung_Label",
+      "scale": {
+        "range": ["#D3AF63", "#5AB4AC"]
+      },
+      "title": "Richtung",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Datum",
+        "type": "ordinal"
+      },
+      {
+        "field": "Stunde",
+        "type": "ordinal"
+      },
+      {
+        "field": "Richtung_Label",
+        "type": "nominal"
+      },
+      {
+        "field": "Anzahl",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "field": "Stunde",
+      "title": "Stunden",
+      "type": "ordinal"
+    },
+    "xOffset": {
+      "field": "Richtung",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "Anzahl",
+      "scale": {
+        "domain": [0, 160]
+      },
+      "title": "Anzahl Personen",
+      "type": "quantitative"
+    }
+  },
+  "height": 600,
+  "mark": {
+    "type": "bar"
+  },
+  "params": [
+    {
+      "bind": {
+        "input": "range",
+        "max": 366,
+        "min": 0,
+        "name": "Datum: ",
+        "step": 1
+      },
+      "name": "date_idx",
+      "value": 0
+    }
+  ],
+  "transform": [
+    {
+      "filter": "datum.date_idx == date_idx"
+    }
+  ],
+  "width": "container"
+}
