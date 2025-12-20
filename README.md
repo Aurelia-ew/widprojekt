@@ -14,9 +14,11 @@ Der verwendete Datensatz (Fussgänger-Zählung an bestimmten Orten der Stadt Zü
 
 ## How-To installieren:
 
-in neuer Umgebung Abhängigkeiten Installieren\
-(jeweils Befehle in Terminal ausführen):
+Um das Programm auszuführen muss Python und NodeJS installiert sein.\
+(falls noch nicht vorhanden):
 
+- pip install fastapi
+- pip install pandas
 - npm i
 
 um Backend zu starten:
