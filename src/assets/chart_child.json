@@ -9,56 +9,111 @@
   "data": {
     "name": "table"
   },
-
-  "encoding": {
-    "color": {
-      "field": "Richtung_Label",
-      "scale": {
-        "range": ["#D3AF63", "#5AB4AC"]
-      },
-      "title": "Richtung",
-      "type": "nominal"
-    },
-    "tooltip": [
-      {
-        "field": "Datum",
-        "type": "ordinal"
-      },
-      {
-        "field": "Stunde",
-        "type": "ordinal"
-      },
-      {
-        "field": "Richtung_Label",
-        "type": "nominal"
-      },
-      {
-        "field": "Anzahl",
-        "type": "quantitative"
-      }
-    ],
-    "x": {
-      "field": "Stunde",
-      "title": "Stunden",
-      "type": "ordinal"
-    },
-    "xOffset": {
-      "field": "Richtung",
-      "type": "nominal"
-    },
-    "y": {
-      "field": "Anzahl",
-      "scale": {
-        "domain": [0, 160]
-      },
-      "title": "Anzahl Personen",
-      "type": "quantitative"
-    }
-  },
   "height": 600,
-  "mark": {
-    "type": "bar"
-  },
+  "layer": [
+    {
+      "encoding": {
+        "color": {
+          "field": "Richtung_Label",
+          "scale": {
+            "range": [
+              "#D3AF63",
+              "#5AB4AC"
+            ]
+          },
+          "title": "Richtung",
+          "type": "nominal"
+        },
+        "tooltip": [
+          {
+            "field": "Datum",
+            "type": "ordinal"
+          },
+          {
+            "field": "Stunde",
+            "type": "ordinal"
+          },
+          {
+            "field": "Richtung_Label",
+            "type": "nominal"
+          },
+          {
+            "field": "Anzahl",
+            "type": "quantitative"
+          }
+        ],
+        "x": {
+          "field": "Stunde",
+          "title": "Stunden",
+          "type": "ordinal"
+        },
+        "xOffset": {
+          "field": "Richtung",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "Anzahl",
+          "scale": {
+            "domain": [
+              0,
+              160
+            ]
+          },
+          "title": "Anzahl Personen",
+          "type": "quantitative"
+        }
+      },
+      "mark": {
+        "type": "bar"
+      },
+      "transform": [
+        {
+          "filter": "datum.date_idx == date_idx"
+        }
+      ]
+    },
+    {
+      "encoding": {
+        "text": {
+          "field": "Titel",
+          "type": "nominal"
+        },
+        "x": {
+          "value": 0
+        },
+        "y": {
+          "value": 0
+        }
+      },
+      "mark": {
+        "align": "left",
+        "baseline": "top",
+        "dx": 5,
+        "dy": -25,
+        "fontSize": 18,
+        "fontWeight": "bold",
+        "type": "text"
+      },
+      "transform": [
+        {
+          "filter": "datum.date_idx == date_idx"
+        },
+        {
+          "aggregate": [
+            {
+              "as": "Datum",
+              "field": "Datum",
+              "op": "min"
+            }
+          ]
+        },
+        {
+          "calculate": "'Fussgängeraufkommen am ' + substring(toString(datum.Datum),0,4) + '-' + substring(toString(datum.Datum),4,6) + '-' + substring(toString(datum.Datum),6,8)",
+          "as": "Titel"
+        }
+      ]
+    }
+  ],
   "params": [
     {
       "bind": {
@@ -70,11 +125,6 @@
       },
       "name": "date_idx",
       "value": 0
-    }
-  ],
-  "transform": [
-    {
-      "filter": "datum.date_idx == date_idx"
     }
   ],
   "width": "container"
